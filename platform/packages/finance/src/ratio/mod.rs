@@ -16,8 +16,8 @@ mod multiplication;
 
 /// A part of something that is divisible.
 /// The total should be non-zero.
-#[derive(Clone, Copy, Deserialize, Serialize)]
-#[cfg_attr(any(test, feature = "testing"), derive(Debug, PartialEq))]
+#[derive(Clone, Copy, Debug, Deserialize, Serialize)]
+#[cfg_attr(any(test, feature = "testing"), derive(PartialEq))]
 #[serde(
     try_from = "SimpleFraction<U>",
     into = "SimpleFraction<U>",
